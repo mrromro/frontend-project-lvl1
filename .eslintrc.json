@@ -11,6 +11,9 @@
     "rules": {
         "no-console": "off",
         "no-await-in-loop": "off",
-        "import/extensions": "off"
+        "import/extensions": "off",
+        "quotes": "off",
+        "import/no-named-as-default": "off",
+        "import/no-named-as-default-member": "off"
     }
 }
