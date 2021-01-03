@@ -15,8 +15,8 @@ function play(gameset) {
   output(description);
   for (const stage of game()) {
     const { question, solution } = stage;
-    const answer = ask(templates.question(question));
-    output(templates.answer(answer));
+    output(templates.question(question));
+    const answer = ask(templates.answer());
     const result = solve(solution, answer);
     output(result.message);
     if (!result.status) {

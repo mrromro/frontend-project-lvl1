@@ -1,6 +1,6 @@
 export default {
   question: (body) => `Question: ${body} `,
-  answer: (answer) => `Your answer: ${answer}`,
+  answer: (answer) => `Your answer: ${answer ?? ''}`,
   judge: (isOk) => (
     isOk
       ? () => 'Correct!'
