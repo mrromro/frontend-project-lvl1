@@ -7,3 +7,8 @@ export function getRandomInt(min = 0, max = 100) {
 export function isEven(num) {
   return Math.abs(num) % 2 === 0;
 }
+
+export function gcd(a, b) {
+  if (!b) return a;
+  return gcd(b, a % b);
+}
