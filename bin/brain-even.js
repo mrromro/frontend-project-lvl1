@@ -46,7 +46,7 @@ console.log('Answer "yes" if the number is even, otherwise answer "no"');
 
 const isWinner = quiz() === 0;
 if (isWinner) {
-  console.log(`Congratulations, ${name}`);
+  console.log(`Congratulations, ${name}!`);
 } else {
-  console.log(`Let's try again, ${name}`);
+  console.log(`Let's try again, ${name}!`);
 }
