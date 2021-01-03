@@ -6,7 +6,7 @@ function solve(solution, answer) {
   const result = solution === answer;
   return {
     status: result,
-    message: templates.answer(result)(answer, solution),
+    message: templates.judge(result)(answer, solution),
   };
 }
 
@@ -16,6 +16,7 @@ function play(gameset) {
   for (const stage of game()) {
     const { question, solution } = stage;
     const answer = ask(templates.question(question));
+    output(templates.answer(answer));
     const result = solve(solution, answer);
     output(result.message);
     if (!result.status) {
