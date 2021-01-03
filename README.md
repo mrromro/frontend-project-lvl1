@@ -8,3 +8,6 @@ Installation and some play 'brain-even' demo:
 
 A demo of 'brain-calc' game:
 [![asciicast](https://asciinema.org/a/74kdMW5L4q4ZTSINwkxOogY9g.svg)](https://asciinema.org/a/74kdMW5L4q4ZTSINwkxOogY9g)
+
+A demo of 'brain-gcd' game:
+[![asciicast](https://asciinema.org/a/MgvDwo9uatRswlLjShYAUUv13.svg)](https://asciinema.org/a/MgvDwo9uatRswlLjShYAUUv13)
