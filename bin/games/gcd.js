@@ -1,6 +1,6 @@
 import { gcd, getRandomInt } from '../utils.js';
 
-const description = '';
+const description = 'Find the greatest common divisor of given numbers.';
 
 function getNumbers() {
   const a = getRandomInt(100, 200);
