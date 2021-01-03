@@ -1,3 +1,9 @@
 import readLineSync from 'readline-sync';
 
-export default (question) => readLineSync.question(question);
+export function ask(question) {
+  return readLineSync.question(question);
+}
+
+export function output(line) {
+  console.log(line);
+}

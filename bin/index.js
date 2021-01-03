@@ -1,4 +1,4 @@
-import ask from './cli.js';
+import { ask, output } from './cli.js';
 import name from './brain-games.js';
 import templates from './templates.js';
 
@@ -10,18 +10,20 @@ function solve(solution, answer) {
   };
 }
 
-function play(game) {
-  for (const stage of game) {
+function play(gameset) {
+  const { game, description } = gameset;
+  output(description);
+  for (const stage of game()) {
     const { question, solution } = stage;
     const answer = ask(templates.question(question));
     const result = solve(solution, answer);
-    console.log(result.message);
+    output(result.message);
     if (!result.status) {
-      console.log(templates.lose(name));
+      output(templates.lose(name));
       return 1;
     }
   }
-  console.log(templates.win(name));
+  output(templates.win(name));
   return 0;
 }
 

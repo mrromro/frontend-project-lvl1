@@ -3,5 +3,5 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
-Installation and some play demo:
+Installation and some play 'brain-even' demo:
 [![asciicast](https://asciinema.org/a/OAjsYanh1qnoKXLIGwW6Cqkdz.svg)](https://asciinema.org/a/OAjsYanh1qnoKXLIGwW6Cqkdz)
