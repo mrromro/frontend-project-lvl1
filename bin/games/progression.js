@@ -25,7 +25,10 @@ function quiz(count = 10) {
   const progression = [...getProgression(options)];
   const index = getRandomInt(0, count - 1);
   const question = progression
-    .map((element, i) => i === index ? '..' : element)
+    .map((element, i) => {
+      if (i === index) return '..';
+      return element;
+    })
     .join(' ');
   const solution = progression[index].toString();
   return {

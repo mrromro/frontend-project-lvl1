@@ -18,22 +18,19 @@ function solve(solution, answer) {
 
 function play(gameset) {
   const name = askName();
-  if (!gameset) return 0;
+  if (!gameset) return;
   const { game, description } = gameset;
   output(description);
-  for (const stage of game) {
+  const win = !game.some((stage) => {
     const { question, solution } = stage;
     output(templates.question(question));
     const answer = ask(templates.answer());
     const result = solve(solution, answer);
     output(result.message);
-    if (!result.status) {
-      output(templates.lose(name));
-      return 1;
-    }
-  }
-  output(templates.win(name));
-  return 0;
+    return !result.status;
+  });
+  if (win) output(templates.win(name));
+  else output(templates.lose(name));
 }
 
 export default play;
