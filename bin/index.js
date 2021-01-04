@@ -21,7 +21,7 @@ function play(gameset) {
   if (!gameset) return;
   const { game, description } = gameset;
   output(description);
-  const win = !game.some((stage) => {
+  const win = ![...game].some((stage) => {
     const { question, solution } = stage;
     output(templates.question(question));
     const answer = ask(templates.answer());
