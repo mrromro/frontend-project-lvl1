@@ -1,6 +1,12 @@
 import { ask, output } from './cli.js';
-import name from './brain-games.js';
 import templates from './templates.js';
+
+function askName() {
+  output('Welcome to the Brain Games!');
+  const name = ask('May I have your name? ');
+  output(`Hello, ${name}!`);
+  return name;
+}
 
 function solve(solution, answer) {
   const result = solution === answer;
@@ -11,6 +17,8 @@ function solve(solution, answer) {
 }
 
 function play(gameset) {
+  const name = askName();
+  if (!gameset) return 0;
   const { game, description } = gameset;
   output(description);
   for (const stage of game) {
