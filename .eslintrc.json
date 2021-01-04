@@ -11,11 +11,5 @@
     "rules": {
         "no-console": "off",
         "no-await-in-loop": "off",
-        "import/extensions": "off",
-        "quotes": "off",
-        "import/no-named-as-default": "off",
-        "import/no-named-as-default-member": "off",
-        "no-restricted-syntax": "off",
-        "no-confusing-arrow": "off"
-    }
+        "import/extensions": "off"    }
 }
