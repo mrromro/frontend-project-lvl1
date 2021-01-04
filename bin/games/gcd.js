@@ -1,4 +1,4 @@
-import { gcd, getRandomInt } from '../utils.js';
+import { game, gcd, getRandomInt } from '../utils.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
@@ -8,19 +8,17 @@ function getNumbers() {
   return [a, b];
 }
 
-function* game(count = 3) {
-  for (let current = 0; current < count; current += 1) {
-    const [a, b] = getNumbers();
-    const question = `${a} ${b}`;
-    const solution = gcd(a, b).toString();
-    yield {
-      question,
-      solution,
-    };
-  }
+function quiz() {
+  const [a, b] = getNumbers();
+  const question = `${a} ${b}`;
+  const solution = gcd(a, b).toString();
+  return {
+    question,
+    solution,
+  };
 }
 
 export default {
-  game,
+  game: game(quiz),
   description,
 };

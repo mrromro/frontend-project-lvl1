@@ -1,4 +1,4 @@
-import { getRandomInt } from '../utils.js';
+import { game, getRandomInt } from '../utils.js';
 
 const description = 'What is the result of the expression?';
 
@@ -37,20 +37,18 @@ function makeEquation(operation, numbers) {
   return `${a} ${operation} ${b}`;
 }
 
-function* game(count = 3) {
-  for (let current = 0; current < count; current += 1) {
-    const operation = chooseOperation(operations);
-    const [a, b] = chooseNumbers(operation);
-    const question = makeEquation(operation, [a, b]);
-    const solution = operations[operation].fn(a, b).toString();
-    yield {
-      question,
-      solution,
-    };
-  }
+function quiz() {
+  const operation = chooseOperation(operations);
+  const [a, b] = chooseNumbers(operation);
+  const question = makeEquation(operation, [a, b]);
+  const solution = operations[operation].fn(a, b).toString();
+  return {
+    question,
+    solution,
+  };
 }
 
 export default {
-  game,
+  game: game(quiz),
   description,
 };

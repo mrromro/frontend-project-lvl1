@@ -13,7 +13,7 @@ function solve(solution, answer) {
 function play(gameset) {
   const { game, description } = gameset;
   output(description);
-  for (const stage of game()) {
+  for (const stage of game) {
     const { question, solution } = stage;
     output(templates.question(question));
     const answer = ask(templates.answer());
